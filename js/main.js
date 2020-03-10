@@ -1,11 +1,11 @@
 let rowIdArray = [];
 
-const outerCont = document.createElement('div');
-outerCont.id = 'outerCont';
-outerCont.classList.add('container', 'border');
+const CONTAINER = document.createElement('div');
+CONTAINER.id = 'outerCont';
+CONTAINER.classList.add('container', 'border');
 
 // outerCont.appendChild(row);
-document.body.appendChild(outerCont);
+document.body.appendChild(CONTAINER);
 
 // function prototype for Row
 function Row(id, classList) {
