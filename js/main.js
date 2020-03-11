@@ -7,7 +7,7 @@ let columnIdArray = [];
 
 const CONTAINER = document.createElement('div');
 CONTAINER.id = 'outerCont';
-CONTAINER.classList.add('container', 'border');
+CONTAINER.classList.add('container');
 
 document.body.appendChild(CONTAINER);
 
@@ -47,7 +47,6 @@ Column.prototype.create = function () {
    */
 
     document.getElementById(column.id).addEventListener('click', gotClicked, { once: true });
-
     /*  
     
     ***** create fx for column onclick <---> function gotClicked() below *****
@@ -68,7 +67,6 @@ Column.prototype.create = function () {
                     --  add 1 to turn
                 
     */
-
     function gotClicked(e) {
         let gotClickedCol = document.getElementById(e.target.id);
 
@@ -91,7 +89,9 @@ function rowCreate() {
 }
 rowCreate();
 
-//TODO: make a fucntion for column create - use one for loop
+
+
+//TODO: make a function for column create - use one for loop
 
 for (let i = 1; i <= 3; i++) {
     let column1 = new Column("col" + i, "col bg-primary ml-3 border bg-primary", rowIdArray[0]);
